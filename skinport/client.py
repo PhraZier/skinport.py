@@ -83,7 +83,7 @@ class Client:
     def __init__(self):
         self.http: HTTPClient = HTTPClient()
         self.ws: socketio.AsyncClient = socketio.AsyncClient(logger=True, engineio_logger=True)
-        self._connected = False
+        self._connected = True
 
     def set_auth(self, *, client_id: str, client_secret: str):
         self.http.set_auth(client_id, client_secret)
